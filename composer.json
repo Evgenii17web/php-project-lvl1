@@ -1,0 +1,10 @@
+{
+    "name": "hexlet/code",
+    "authors": [
+        {
+            "name": "Евгений Першин",
+            "email": "evgenii17pershin@gmail.com"
+        }
+    ],
+    "require": {}
+}
