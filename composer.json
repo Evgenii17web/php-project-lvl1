@@ -1,5 +1,10 @@
 {
     "name": "hexlet/code",
+    "autoload": {
+        "files": [
+            "src/Cli.php"
+        ]
+    },
     "authors": [
         {
             "name": "Евгений Першин",
@@ -8,7 +13,9 @@
     ],
     "description": "Some description",
     "license": "proprietary",
-    "require": {},
+    "require": {
+        "wp-cli/php-cli-tools": "^0.11.11"
+    },
     "bin": [
         "bin/brain-games"
     ]
