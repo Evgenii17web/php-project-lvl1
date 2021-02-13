@@ -11,4 +11,3 @@ function greetUser()
     $name = prompt('May I have your name?');
     line("Hello, %s!", $name);
 }
-// Тест коммент для теста github actions
