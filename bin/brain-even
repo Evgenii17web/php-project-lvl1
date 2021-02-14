@@ -11,7 +11,7 @@ function startBrainEven()
     line('Welcome to the Brain Game!');
     $name = prompt('May I have your name?');
     line("Hello, %s!", $name);
-    $firstQuestion = "Answer \"yes\" if the number is even, otherwise answer \"no\".";
+    $firstQuestion = 'Answer "yes" if the number is even, otherwise answer "no".';
     line($firstQuestion);
 
     for ($i = 0; $i < 3; $i++) {
@@ -35,7 +35,7 @@ function startBrainEven()
         } elseif ($number % 2 === 1 && $answer === 'no') {
             line('Correct!');
         } else {
-            line("{$answer} is wrong answer ;(. Correct answer was '{$rightAnswer}'. Let's try again, {$name}!");
+            line("'{$answer}' is wrong answer ;(. Correct answer was '{$rightAnswer}'. Let's try again, {$name}!");
             break;
         }
 
