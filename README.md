@@ -6,4 +6,4 @@
 https://github.com/Evgenii17web/php-project-lvl1/workflows/Super-Linter/badge.svg
 
 Демонстрация игры "Определение четного числа".
-<a href="https://asciinema.org/a/iyFskA79YdgYcFFDedH7XsqDz" target="_blank"><img src="https://asciinema.org/a/iyFskA79YdgYcFFDedH7XsqDz.svg" /></a>
+<script id="asciicast-iyFskA79YdgYcFFDedH7XsqDz" src="https://asciinema.org/a/iyFskA79YdgYcFFDedH7XsqDz.js" async></script>
