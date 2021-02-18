@@ -33,15 +33,13 @@ function startBrainCalc()
                 $rightAnswer = $firstNum * $secondNum;
         }
 
-
         $answer = prompt("Question: {$firstNum} {$mathematicalExpression[$randomExpression]} {$secondNum}");
         line("Your answer: %s", $answer);
-
 
         if ($answer == $rightAnswer) {
             line('Correct!');
         } else {
-            line("'{$answer}' is wrong answer ;(. Correct answer was '{$rightAnswer}'.");
+            line("'{$answer}' is wrong answer ;(. Correct answer was '{$rightAnswer}'.\nLet's try again, {$name}!");
             break;
         }
 
@@ -50,5 +48,3 @@ function startBrainCalc()
         }
     }
 }
-
-print_r(startBrainCalc());

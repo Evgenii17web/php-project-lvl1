@@ -11,3 +11,5 @@ https://github.com/Evgenii17web/php-project-lvl1/workflows/Super-Linter/badge.sv
 Демонстрация игры "Калькулятор".
 <a href="https://asciinema.org/a/vgQ2iLVTGWgWbdSMzzR11C8l7" target="_blank"><img src="https://asciinema.org/a/vgQ2iLVTGWgWbdSMzzR11C8l7.svg" /></a>
 
+Демонстрация игры "Наибольший общий делитель".
+<a href="https://asciinema.org/a/saMXO5e6xUTNYrpwKJnRaSZxu" target="_blank"><img src="https://asciinema.org/a/saMXO5e6xUTNYrpwKJnRaSZxu.svg" /></a>

@@ -6,29 +6,29 @@ require __DIR__ . '/../vendor/autoload.php';
 use function cli\line;
 use function cli\prompt;
 
-function startBrainEven()
+function startGcd()
 {
     line('Welcome to the Brain Game!');
     $name = prompt('May I have your name?');
     line("Hello, %s!", $name);
-    $firstQuestion = 'Answer "yes" if the number is even, otherwise answer "no".';
+    $firstQuestion = 'Find the greatest common divisor of given numbers.';
     line($firstQuestion);
 
     for ($i = 0; $i < 3; $i++) {
 
-        $number = rand(1, 100);
-        $rightAnswer = '';
+        $firstNum = rand(1, 100);
+        $secondNum = rand(1, 100);
 
-        switch ($number % 2) {
-            case 0:
-                $rightAnswer = 'yes';
-                break;
-            case 1:
-                $rightAnswer = 'no';
-        }
-
-        $answer = prompt("Question: $number");
+        $answer = prompt("Question: {$firstNum} {$secondNum}");
         line("Your answer: %s", $answer);
+
+        while ($firstNum != $secondNum)
+            if ($firstNum > $secondNum) {
+                $rightAnswer = $firstNum -= $secondNum;
+            } else {
+                $rightAnswer = $secondNum -= $firstNum;
+            }
+
 
         if ($answer == $rightAnswer) {
             line('Correct!');
@@ -42,4 +42,5 @@ function startBrainEven()
         }
     }
 }
-print_r(startBrainEven());
+
+print_r(startGcd());
