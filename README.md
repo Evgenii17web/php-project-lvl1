@@ -13,3 +13,6 @@ https://github.com/Evgenii17web/php-project-lvl1/workflows/Super-Linter/badge.sv
 
 Демонстрация игры "Наибольший общий делитель".
 <a href="https://asciinema.org/a/saMXO5e6xUTNYrpwKJnRaSZxu" target="_blank"><img src="https://asciinema.org/a/saMXO5e6xUTNYrpwKJnRaSZxu.svg" /></a>
+
+Демонстрация игры "Арифметическая прогрессия".
+<a href="https://asciinema.org/a/wEaDtPTgsCaHaR4echRUjpr4D" target="_blank"><img src="https://asciinema.org/a/wEaDtPTgsCaHaR4echRUjpr4D.svg" /></a>
