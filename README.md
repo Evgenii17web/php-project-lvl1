@@ -16,3 +16,6 @@ https://github.com/Evgenii17web/php-project-lvl1/workflows/Super-Linter/badge.sv
 
 Демонстрация игры "Арифметическая прогрессия".
 <a href="https://asciinema.org/a/wEaDtPTgsCaHaR4echRUjpr4D" target="_blank"><img src="https://asciinema.org/a/wEaDtPTgsCaHaR4echRUjpr4D.svg" /></a>
+
+Демонстрация игры "Простое ли число?".
+<a href="https://asciinema.org/a/69fDBeYdtBlcDczazIGXC6VHS" target="_blank"><img src="https://asciinema.org/a/69fDBeYdtBlcDczazIGXC6VHS.svg" /></a>

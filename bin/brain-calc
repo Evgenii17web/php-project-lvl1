@@ -3,48 +3,4 @@
 
 require __DIR__ . '/../vendor/autoload.php';
 
-use function cli\line;
-use function cli\prompt;
-
-function startBrainCalc()
-{
-    line('Welcome to the Brain Game!');
-    $name = prompt('May I have your name?');
-    line("Hello, %s!", $name);
-    $firstQuestion = 'What is the result of the expression?';
-    line($firstQuestion);
-
-    for ($i = 0; $i < 3; $i++) {
-        $firstNum = rand(1, 10);
-        $secondNum = rand(1, 10);
-        $mathematicalExpression = ['+', '-', '*'];
-        $randomExpression = array_rand($mathematicalExpression);
-
-        $rightAnswer = '';
-
-        switch ($mathematicalExpression[$randomExpression]) {
-            case '+':
-                $rightAnswer = $firstNum + $secondNum;
-                break;
-            case '-':
-                $rightAnswer = $firstNum - $secondNum;
-                break;
-            case '*':
-                $rightAnswer = $firstNum * $secondNum;
-        }
-
-        $answer = prompt("Question: {$firstNum} {$mathematicalExpression[$randomExpression]} {$secondNum}");
-        line("Your answer: %s", $answer);
-
-        if ($answer == $rightAnswer) {
-            line('Correct!');
-        } else {
-            line("'{$answer}' is wrong answer ;(. Correct answer was '{$rightAnswer}'.\nLet's try again, {$name}!");
-            break;
-        }
-
-        if ($i === 2) {
-            line("Congratulations, {$name}!");
-        }
-    }
-}
+startBrainCalc();

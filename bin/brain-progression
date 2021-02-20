@@ -3,47 +3,4 @@
 
 require __DIR__ . '/../vendor/autoload.php';
 
-use function cli\line;
-use function cli\prompt;
-
-function startProgression()
-{
-    line('Welcome to the Brain Game!');
-    $name = prompt('May I have your name?');
-    line("Hello, %s!", $name);
-    $firstQuestion = 'What number is missing in the progression?';
-    line($firstQuestion);
-
-    for ($i = 0; $i < 3; $i++) {
-        $lengthProgression = rand(5, 10);
-        $arrayOfAllNumbers = [];
-
-        $randomNum = rand(1,5);
-        for ($u = 1; $u <= 100; $u += $randomNum) {
-            $arrayOfAllNumbers[] = $u;
-        }
-        
-        $lengthOfArrayOfAllNumbers = count($arrayOfAllNumbers) - 10;
-        $cutArray = array_slice($arrayOfAllNumbers, rand(1, $lengthOfArrayOfAllNumbers), $lengthProgression);
-        $lengthOfCutArray = count($cutArray) - 1;
-        $rightAnswer = $cutArray[rand(0, $lengthOfCutArray)];
-        $stringOfNumbers = implode(' ', $cutArray);
-        $result = str_replace($rightAnswer, '..', $stringOfNumbers);
-
-        $answer = prompt("Question: $result");
-        line("Your answer: %s", $answer);
-
-        if ($answer == $rightAnswer) {
-            line('Correct!');
-        } else {
-            line("'{$answer}' is wrong answer ;(. Correct answer was '{$rightAnswer}'.\nLet's try again, {$name}!");
-            break;
-        }
-
-        if ($i === 2) {
-            line("Congratulations, {$name}!");
-        }
-    }
-}
-
 startProgression();
