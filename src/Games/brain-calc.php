@@ -6,14 +6,13 @@ function startBrainCalc(): int
 {
     $question = 'What is the result of the expression?';
     $name = Engine\greetUser($question);
-    $rightAnswer = '';
+    $rightAnswer = 0;
 
     for ($i = 0; $i < 3; $i++) {
         $firstNum = rand(1, 10);
         $secondNum = rand(1, 10);
         $mathematicalExpression = ['+', '-', '*'];
         $randomExpression = array_rand($mathematicalExpression);
-        $rightAnswer = 0;
 
         switch ($mathematicalExpression[$randomExpression]) {
             case '+':
@@ -30,6 +29,5 @@ function startBrainCalc(): int
 
         $i = Engine\checkRightAnswer($answer, $rightAnswer, $i, $name);
     }
-    $rightAnswer = (int) $rightAnswer;
-    return $rightAnswer;
+    return (int)$rightAnswer;
 }
