@@ -9,7 +9,7 @@ function startPrime(): string
     $rightAnswer = '';
 
     for ($i = 0; $i < 3; $i++) {
-        $randomNumber = rand(1, 10);
+        $randomNumber = rand(1, 11);
         $rightAnswer = '';
 
         if ($randomNumber === 1 || $randomNumber === 2 || $randomNumber === 3 ||  $randomNumber === 5) {
