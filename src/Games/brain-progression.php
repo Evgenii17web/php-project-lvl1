@@ -25,7 +25,7 @@ function startProgression() : string
         $stringOfNumbers = implode(' ', $cutArray);
         $result = str_replace($rightAnswer, '..', $stringOfNumbers);
 
-        $answer = Engine\askQuestion($result);
+        $answer = Engine\askQuestion("$result");
 
         $i = Engine\checkRightAnswer($answer, $rightAnswer, $i, $name);
     }

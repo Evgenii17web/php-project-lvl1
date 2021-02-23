@@ -14,14 +14,14 @@ function greetUser(string $question): string
     return $name;
 }
 
-function askQuestion(mixed $question): string
+function askQuestion(string $question): string
 {
     $answer = prompt("Question: {$question}");
     line("Your answer: %s", $answer);
     return $answer;
 }
 
-function checkRightAnswer(mixed $answer, mixed $rightAnswer, int $i, string $name): int
+function checkRightAnswer(string $answer, string $rightAnswer, int $i, string $name): int
 {
     if ($answer == $rightAnswer) {
         line('Correct!');

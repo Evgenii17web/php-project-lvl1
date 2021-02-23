@@ -2,7 +2,7 @@
 
 use Brain\Games\Engine;
 
-function startGcd()
+function startGcd() : string
 {
     $question = 'Find the greatest common divisor of given numbers.';
     $name = Engine\greetUser($question);

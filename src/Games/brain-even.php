@@ -19,7 +19,7 @@ function startBrainEven() : string
                 $rightAnswer = 'no';
         }
 
-        $answer = Engine\askQuestion($number);
+        $answer = Engine\askQuestion("$number");
 
         $i = Engine\checkRightAnswer($answer, $rightAnswer, $i, $name);
     }
