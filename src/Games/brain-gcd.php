@@ -6,6 +6,7 @@ function startGcd()
 {
     $question = 'Find the greatest common divisor of given numbers.';
     $name = Engine\greetUser($question);
+    $rightAnswer = '';
 
     for ($i = 0; $i < 3; $i++) {
         $firstNum = rand(1, 100);
@@ -22,4 +23,5 @@ function startGcd()
         }
         $i = Engine\checkRightAnswer($answer, $rightAnswer, $i, $name);
     }
+    return $rightAnswer;
 }

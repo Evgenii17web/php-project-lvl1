@@ -2,10 +2,11 @@
 
 use Brain\Games\Engine;
 
-function startProgression()
+function startProgression() : string
 {
     $question = 'What number is missing in the progression?';
     $name = Engine\greetUser($question);
+    $rightAnswer = '';
 
     for ($i = 0; $i < 3; $i++) {
         $lengthProgression = rand(5, 10);
@@ -20,6 +21,7 @@ function startProgression()
         $cutArray = array_slice($arrayOfAllNumbers, rand(1, $lengthOfArrayOfAllNumbers), $lengthProgression);
         $lengthOfCutArray = count($cutArray) - 1;
         $rightAnswer = $cutArray[rand(0, $lengthOfCutArray)];
+        $rightAnswer = (string) $rightAnswer;
         $stringOfNumbers = implode(' ', $cutArray);
         $result = str_replace($rightAnswer, '..', $stringOfNumbers);
 
@@ -27,4 +29,5 @@ function startProgression()
 
         $i = Engine\checkRightAnswer($answer, $rightAnswer, $i, $name);
     }
+    return $rightAnswer;
 }

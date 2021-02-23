@@ -2,7 +2,7 @@
 
 use Brain\Games\Engine;
 
-function startBrainCalc()
+function startBrainCalc() : string
 {
     $question = 'What is the result of the expression?';
     $name = Engine\greetUser($question);
@@ -12,7 +12,6 @@ function startBrainCalc()
         $secondNum = rand(1, 10);
         $mathematicalExpression = ['+', '-', '*'];
         $randomExpression = array_rand($mathematicalExpression);
-
         $rightAnswer = '';
 
         switch ($mathematicalExpression[$randomExpression]) {
@@ -30,4 +29,5 @@ function startBrainCalc()
 
         $i = Engine\checkRightAnswer($answer, $rightAnswer, $i, $name);
     }
+    return $rightAnswer;
 }

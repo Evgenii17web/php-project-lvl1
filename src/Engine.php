@@ -5,7 +5,7 @@ namespace Brain\Games\Engine;
 use function cli\line;
 use function cli\prompt;
 
-function greetUser($question): string
+function greetUser(string $question): string
 {
     line('Welcome to the Brain Game!');
     $name = prompt('May I have your name?');
@@ -14,14 +14,14 @@ function greetUser($question): string
     return $name;
 }
 
-function askQuestion($question): string
+function askQuestion(mixed $question): string
 {
     $answer = prompt("Question: {$question}");
     line("Your answer: %s", $answer);
     return $answer;
 }
 
-function checkRightAnswer($answer, $rightAnswer, $i, $name): int
+function checkRightAnswer(int $answer, mixed $rightAnswer, int $i, string $name): int
 {
     if ($answer == $rightAnswer) {
         line('Correct!');
