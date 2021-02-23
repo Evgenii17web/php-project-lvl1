@@ -12,7 +12,11 @@ function startPrime(): string
         $randomNumber = rand(1, 100);
         $rightAnswer = '';
 
-        for ($u = 2; $u <= $randomNumber; $u++) {
+        if ($randomNumber === 1 || $randomNumber === 2 || $randomNumber === 3 ||  $randomNumber === 5) {
+            $rightAnswer = 'yes';
+        }
+
+        for ($u = 2; $u <= $randomNumber / 2; $u++) {
             if ($randomNumber % $u == 0) {
                 $rightAnswer = 'no';
                 break;
