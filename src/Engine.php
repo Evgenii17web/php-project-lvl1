@@ -21,7 +21,7 @@ function askQuestion(mixed $question): string
     return $answer;
 }
 
-function checkRightAnswer(int $answer, mixed $rightAnswer, int $i, string $name): int
+function checkRightAnswer(mixed $answer, mixed $rightAnswer, int $i, string $name): int
 {
     if ($answer == $rightAnswer) {
         line('Correct!');
