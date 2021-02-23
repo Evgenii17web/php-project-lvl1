@@ -28,5 +28,6 @@ function startGcd(): int
         $rightAnswer = (string) $rightAnswer;
         $i = Engine\checkRightAnswer($answer, $rightAnswer, $i, $name);
     }
+    $rightAnswer = (int) $rightAnswer;
     return $rightAnswer;
 }

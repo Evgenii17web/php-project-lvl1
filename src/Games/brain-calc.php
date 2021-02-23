@@ -30,5 +30,6 @@ function startBrainCalc(): int
 
         $i = Engine\checkRightAnswer($answer, $rightAnswer, $i, $name);
     }
+    $rightAnswer = (int) $rightAnswer;
     return $rightAnswer;
 }
