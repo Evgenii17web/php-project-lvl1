@@ -11,7 +11,7 @@ function startPrime()
         $randomNumber = rand(1, 100);
         $rightAnswer = '';
 
-        for ($u = 2; $u <= $randomNumber/2; $u++) {
+        for ($u = 2; $u <= $randomNumber / 2; $u++) {
             if ($randomNumber % $u == 0) {
                 $rightAnswer = 'no';
                 break;
