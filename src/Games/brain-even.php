@@ -2,7 +2,7 @@
 
 use Brain\Games\Engine;
 
-function startBrainEven() : string
+function startBrainEven(): string
 {
     $question = 'Answer "yes" if the number is even, otherwise answer "no".';
     $name = Engine\greetUser($question);

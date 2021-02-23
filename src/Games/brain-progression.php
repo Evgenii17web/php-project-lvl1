@@ -2,7 +2,7 @@
 
 use Brain\Games\Engine;
 
-function startProgression() : string
+function startProgression(): string
 {
     $question = 'What number is missing in the progression?';
     $name = Engine\greetUser($question);

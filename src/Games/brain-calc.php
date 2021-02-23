@@ -2,7 +2,7 @@
 
 use Brain\Games\Engine;
 
-function startBrainCalc() : string
+function startBrainCalc(): string
 {
     $question = 'What is the result of the expression?';
     $name = Engine\greetUser($question);

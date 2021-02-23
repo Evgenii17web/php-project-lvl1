@@ -2,7 +2,7 @@
 
 use Brain\Games\Engine;
 
-function startPrime() : string
+function startPrime(): string
 {
     $question = 'Answer "yes" if given number is prime. Otherwise answer "no".';
     $name = Engine\greetUser($question);
