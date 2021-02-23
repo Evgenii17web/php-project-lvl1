@@ -9,17 +9,21 @@ function startGcd(): string
     $rightAnswer = '';
 
     for ($i = 0; $i < 3; $i++) {
-        $firstNum = rand(1, 100);
-        $secondNum = rand(1, 100);
+        $firstNum = rand(1, 5);
+        $secondNum = rand(1, 5);
 
         $answer = Engine\askQuestion("{$firstNum} {$secondNum}");
 
-        while ($firstNum != $secondNum) {
-            if ($firstNum > $secondNum) {
-                $rightAnswer = $firstNum -= $secondNum;
-            } else {
-                $rightAnswer = $secondNum -= $firstNum;
+        if ($firstNum != $secondNum) {
+            while ($firstNum != $secondNum) {
+                if ($firstNum > $secondNum) {
+                    $rightAnswer = $firstNum -= $secondNum;
+                } else {
+                    $rightAnswer = $secondNum -= $firstNum;
+                }
             }
+        } else {
+            $rightAnswer = $firstNum;
         }
         $i = Engine\checkRightAnswer($answer, $rightAnswer, $i, $name);
     }
