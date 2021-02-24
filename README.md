@@ -4,7 +4,7 @@
 
 <a href="https://codeclimate.com/github/Evgenii17web/php-project-lvl1/maintainability"><img src="https://api.codeclimate.com/v1/badges/006f66382ad5de4a190b/maintainability" /></a>
 
-![example workflow](https://github.com/Evgenii17web/php-project-lvl1/actions/workflows/superlinter.yml/badge.svg)
+<!-- ![example workflow](https://github.com/Evgenii17web/php-project-lvl1/actions/workflows/superlinter.yml/badge.svg) -->
 
 Демонстрация игры "Определение четного числа".
 <a href="https://asciinema.org/a/393546" target="_blank"><img src="https://asciinema.org/a/393546.svg" /></a>
