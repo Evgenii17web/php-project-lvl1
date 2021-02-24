@@ -2,7 +2,7 @@
     "name": "hexlet/code",
     "autoload": {
         "psr-4": {
-          "Brain\\Games\\": "src"
+          "Php\\Project\\Lvl1\\": "src"
         },
         "files": [
             "src/Cli.php",
