@@ -1,6 +1,9 @@
 {
     "name": "hexlet/code",
     "autoload": {
+        "psr-4": {
+          "Php\\Project\\Lvl1\\": "src"
+        },
         "files": [
             "src/Cli.php",
             "src/Engine.php",
