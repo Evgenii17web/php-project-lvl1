@@ -1,27 +1,27 @@
 <?php
 
-use Brain\Games\Engine;
+use function Brain\Games\Engine\startEngine;
 
-function startBrainEven(): string
+function startBrainEven(): void
 {
-    $question = 'Answer "yes" if the number is even, otherwise answer "no".';
-    $name = Engine\greetUser($question);
-    $rightAnswer = '';
+    $questionGame = 'Answer "yes" if the number is even, otherwise answer "no".';
 
-    for ($i = 0; $i < 3; $i++) {
-        $number = rand(1, 100);
+    $arrayOfRandomNumbers = [];
+    $arrayOfRandomAnswers = [];
 
-        switch ($number % 2) {
+    for ($u = 0; $u < 3; $u++) {
+        $randomNumber = rand(1, 100);
+        $arrayOfRandomNumbers[] = $randomNumber;
+
+        switch ($randomNumber % 2) {
             case 0:
                 $rightAnswer = 'yes';
+                $arrayOfRandomAnswers[] = $rightAnswer;
                 break;
             case 1:
                 $rightAnswer = 'no';
+                $arrayOfRandomAnswers[] = $rightAnswer;
         }
-
-        $answer = Engine\askQuestion("$number");
-
-        $i = Engine\checkRightAnswer($answer, $rightAnswer, $i, $name);
     }
-    return $rightAnswer;
+    startEngine($questionGame, $arrayOfRandomNumbers, $arrayOfRandomAnswers);
 }
