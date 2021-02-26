@@ -1,18 +1,18 @@
 <?php
 
-use Brain\Games\Engine;
+use function Brain\Games\Engine\startEngine;
 
-function startGcd(): int
+function startGcd(): void
 {
-    $question = 'Find the greatest common divisor of given numbers.';
-    $name = Engine\greetUser($question);
-    $rightAnswer = 0;
+    $questionGame = 'Find the greatest common divisor of given numbers.';
+    $arrayOfRandomNumbers = [];
+    $arrayOfRightAnswers = [];
 
-    for ($i = 0; $i < 3; $i++) {
+    for ($u = 0; $u < 3; $u++) {
         $firstNum = rand(1, 100);
         $secondNum = rand(1, 100);
-
-        $answer = Engine\askQuestion("{$firstNum} {$secondNum}");
+        $arrayOfRandomNumbers[] = "{$firstNum} {$secondNum}";
+        $rightAnswer = '';
 
         if ($firstNum != $secondNum) {
             while ($firstNum != $secondNum) {
@@ -22,11 +22,10 @@ function startGcd(): int
                     $rightAnswer = $secondNum -= $firstNum;
                 }
             }
+            $arrayOfRightAnswers[] = $rightAnswer;
         } else {
-            $rightAnswer = $firstNum;
+            $arrayOfRightAnswers[] = $firstNum;
         }
-        $rightAnswer = (string) $rightAnswer;
-        $i = Engine\checkRightAnswer($answer, $rightAnswer, $i, $name);
     }
-    return (int)$rightAnswer;
+    startEngine($questionGame, $arrayOfRandomNumbers, $arrayOfRightAnswers);
 }

@@ -1,20 +1,17 @@
 <?php
 
-use Brain\Games\Engine;
+use function Brain\Games\Engine\startEngine;
 
-function startPrime(): string
+function startPrime(): void
 {
-    $question = 'Answer "yes" if given number is prime. Otherwise answer "no".';
-    $name = Engine\greetUser($question);
-    $rightAnswer = '';
+    $questionGame = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+    $arrayOfRandomNumbers = [];
+    $arrayOfRightAnswers = [];
 
     for ($i = 0; $i < 3; $i++) {
-        $randomNumber = rand(1, 100);
+        $randomNumber = rand(5, 100);
+        $arrayOfRandomNumbers[] = $randomNumber;
         $rightAnswer = '';
-
-        if ($randomNumber === 1 || $randomNumber === 2 || $randomNumber === 3 ||  $randomNumber === 5) {
-            $rightAnswer = 'yes';
-        }
 
         for ($u = 2; $u <= $randomNumber / 2; $u++) {
             if ($randomNumber % $u == 0) {
@@ -24,9 +21,7 @@ function startPrime(): string
                 $rightAnswer = 'yes';
             }
         }
-
-        $answer = Engine\askQuestion("$randomNumber");
-        $i = Engine\checkRightAnswer($answer, $rightAnswer, $i, $name);
+        $arrayOfRightAnswers[] = $rightAnswer;
     }
-    return $rightAnswer;
+    startEngine($questionGame, $arrayOfRandomNumbers, $arrayOfRightAnswers);
 }

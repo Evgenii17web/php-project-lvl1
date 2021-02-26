@@ -1,12 +1,12 @@
 <?php
 
-use Brain\Games\Engine;
+use function Brain\Games\Engine\startEngine;
 
-function startProgression(): string
+function startProgression(): void
 {
-    $question = 'What number is missing in the progression?';
-    $name = Engine\greetUser($question);
-    $rightAnswer = '';
+    $questionGame = 'What number is missing in the progression?';
+    $arrayOfRandomNumbers = [];
+    $arrayOfRightAnswers = [];
 
     for ($i = 0; $i < 3; $i++) {
         $lengthProgression = rand(5, 10);
@@ -25,9 +25,8 @@ function startProgression(): string
         $stringOfNumbers = implode(' ', $cutArray);
         $result = str_replace($rightAnswer, '..', $stringOfNumbers);
 
-        $answer = Engine\askQuestion("$result");
-
-        $i = Engine\checkRightAnswer($answer, $rightAnswer, $i, $name);
+        $arrayOfRightAnswers[] = $rightAnswer;
+        $arrayOfRandomNumbers[] = $result;
     }
-    return $rightAnswer;
+    startEngine($questionGame, $arrayOfRandomNumbers, $arrayOfRightAnswers);
 }

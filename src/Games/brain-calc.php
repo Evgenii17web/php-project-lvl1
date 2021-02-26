@@ -1,14 +1,14 @@
 <?php
 
-use Brain\Games\Engine;
+use function Brain\Games\Engine\startEngine;
 
-function startBrainCalc(): int
+function startBrainCalc(): void
 {
-    $question = 'What is the result of the expression?';
-    $name = Engine\greetUser($question);
-    $rightAnswer = 0;
+    $questionGame = 'What is the result of the expression?';
+    $arrayOfRandomExpression = [];
+    $arrayOfRightAnswers = [];
 
-    for ($i = 0; $i < 3; $i++) {
+    for ($u = 0; $u < 3; $u++) {
         $firstNum = rand(1, 10);
         $secondNum = rand(1, 10);
         $mathematicalExpression = ['+', '-', '*'];
@@ -17,17 +17,17 @@ function startBrainCalc(): int
         switch ($mathematicalExpression[$randomExpression]) {
             case '+':
                 $rightAnswer = $firstNum + $secondNum;
+                $arrayOfRightAnswers[] = $rightAnswer;
                 break;
             case '-':
                 $rightAnswer = $firstNum - $secondNum;
+                $arrayOfRightAnswers[] = $rightAnswer;
                 break;
             case '*':
                 $rightAnswer = $firstNum * $secondNum;
+                $arrayOfRightAnswers[] = $rightAnswer;
         }
-        $rightAnswer = (string) $rightAnswer;
-        $answer = Engine\askQuestion("{$firstNum} {$mathematicalExpression[$randomExpression]} {$secondNum}");
-
-        $i = Engine\checkRightAnswer($answer, $rightAnswer, $i, $name);
+        $arrayOfRandomExpression[] = "{$firstNum} {$mathematicalExpression[$randomExpression]} {$secondNum}";
     }
-    return (int)$rightAnswer;
+    startEngine($questionGame, $arrayOfRandomExpression, $arrayOfRightAnswers);
 }
