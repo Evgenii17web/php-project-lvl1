@@ -13,7 +13,7 @@ function startProgression(): void
         $arrayOfAllNumbers = [];
 
         $randomNum = rand(1, 5);
-        for ($u = 1; $u <= 100; $u += $randomNum) {
+        for ($u = 10; $u <= 100; $u += $randomNum) {
             $arrayOfAllNumbers[] = $u;
         }
 
